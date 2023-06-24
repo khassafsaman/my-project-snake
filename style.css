@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-frame {
+    width: 600px;
+    height: 600px;
+    box-shadow: 0 0 2px 2px gray;
+    margin: auto;
+    margin-top: 40px;
+    padding: 10px;
+}
+
+.board {
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    margin-left: 50px;
+    margin-top: 10px;
+    background-image: url("img/snake&ladder.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+    /* position: absolute; */
+}
+
+.dice-frame {
+    width: 500px;
+    height: 80px;
+    /* border: 1px solid black; */
+    margin-left: 50px;
+    margin-top: 5px;
+    position: absolute;
+}
+
+.box {
+    width: 48px;
+    height: 48px;
+    border: 1px solid black;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+
+}
+
+.cir {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.918);
+    transform: scale(0.7);
+    border-radius: 100%;
+    border: 1px solid green;
+    opacity: 0.9;
+}
+
+.dice {
+    margin: auto;
+    width: 60px;
+    height: 60px;
+    /* border: 1px solid green; */
+    position: relative;
+    transform-style: preserve-3d;
+    /* transform: rotateX(-45deg) rotateY(20deg) rotateZ(5deg) ; */
+    /* animation: animl 5s infinite; */
+
+}
+
+
+.dice>div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* transform: scale(0.5); */
+}
+
+.front {
+    transform: translateZ(30px);
+    background: green;
+}
+
+.back {
+    transform: translateZ(-30px);
+    background: red;
+}
+
+.left {
+    transform-origin: left;
+    transform: rotateY(90deg) translateX(-30px);
+    background: rgb(214, 191, 191);
+}
+
+.right {
+    transform-origin: right;
+    transform: rotateY(90deg) translateX(30px);
+    background: brown;
+}
+
+.top {
+    transform-origin: center;
+    transform: rotateX(90deg) translateZ(30px);
+    background: yellow;
+}
+
+.bottom {
+    transform-origin: center;
+    transform: rotateX(90deg) translateZ(-30px);
+    background: yellow;
+}
+
+.dot {
+    width: 16px;
+    height: 16px;
+    background: black;
+    border-radius: 100%;
+    margin: 3%;
+
+}
+.right .dot{
+    margin: 5%;
+}
+.bottom .dot{
+    margin: 4%;
+}
+
+.anm{
+    animation: animl 3s 30;
+}
+@keyframes animl {
+    0% {
+
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    50% {
+
+        transform: rotateX(160deg) rotateY(-120deg) rotateZ(20deg);
+    }
+    100% {
+
+        transform: rotateX(60deg) rotateY(120deg) rotateZ(120deg);
+    }
+}
+
+
+/* responsive */
+/* 
+@media(max-width:768px){
+    .board{
+        width: 600px;
+        height: 600px;
+    }
+} */
