@@ -1,3 +1,4 @@
+// Create a box
 function createBoxes() {
     let boxes = "";
     let no = 100, inc = -1;
@@ -22,20 +23,23 @@ function createBoxes() {
 
 }
 
+// Create a square with a red circle
 function setbox(id, color) {
     document.getElementById(id).innerHTML = `<div class='cir' style='background:${color}'></div>`;
 
 };
+
+// Clear the content inside the square
 function removebox(id) {
     document.getElementById(id).innerHTML = ``;
 };
 
 createBoxes();
 
-
+// Player position
 let pos = 0;
 
-
+// Player movement function
 function playerMover(move) {
     if (move > 0) {
         setTimeout(() => {
@@ -57,8 +61,6 @@ function playerMover(move) {
                 return;
             }
 
-
-
             playerMover(move);
             if (move == 0) {
                 check(ladders);
@@ -71,7 +73,7 @@ function playerMover(move) {
 };
 
 
-
+// Snake and ladder position
 let ladders = [
     [1, 38],
     [4, 14],
@@ -96,7 +98,7 @@ let snakes = [
 
 
 
-
+// Dice roll function
 function rotateDice() {
     // document.querySelector("#rtbtn").style.display = "none";
     document.querySelector(".dice").classList.add("anm");
@@ -117,8 +119,8 @@ function rotateDice() {
     }, 3000);
 };
 
+// The function of checking the existence of a ladder
 function check_ladders() {
-    // console.log("okk")
     for (let i = 0; i < ladders.length; i++) {
         if (ladders[i][0] == pos) {
             setTimeout(() => {
@@ -135,6 +137,7 @@ function check_ladders() {
     }
 };
 
+// The function of checking the existence of a snake
 function check(data) {
     for (let i = 0; i < data.length; i++) {
         if (data[i][0] == pos) {

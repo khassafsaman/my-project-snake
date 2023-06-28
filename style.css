@@ -22,14 +22,11 @@
     background-image: url("img/snake&ladder.png");
     background-repeat: no-repeat;
     background-size: 100%;
-    
-    /* position: absolute; */
 }
 
 .dice-frame {
     width: 500px;
     height: 80px;
-    /* border: 1px solid black; */
     margin-left: 50px;
     margin-top: 5px;
     position: absolute;
@@ -41,7 +38,6 @@
     border: 1px solid black;
     background: rgba(0, 0, 0, 0.3);
     position: absolute;
-
 }
 
 .cir {
@@ -58,15 +54,11 @@
     margin: auto;
     width: 60px;
     height: 60px;
-    /* border: 1px solid green; */
     position: relative;
     transform-style: preserve-3d;
-    /* transform: rotateX(-45deg) rotateY(20deg) rotateZ(5deg) ; */
-    /* animation: animl 5s infinite; */
-
 }
 
-
+/* style dice */
 .dice>div {
     width: 100%;
     height: 100%;
@@ -75,37 +67,42 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    /* transform: scale(0.5); */
 }
 
+/* front the dice */
 .front {
     transform: translateZ(30px);
     background: green;
 }
 
+/* back the dice */
 .back {
     transform: translateZ(-30px);
     background: red;
 }
 
+/* left the dice */
 .left {
     transform-origin: left;
     transform: rotateY(90deg) translateX(-30px);
     background: rgb(214, 191, 191);
 }
 
+/* right the dice */
 .right {
     transform-origin: right;
     transform: rotateY(90deg) translateX(30px);
     background: brown;
 }
 
+/* top the dice */
 .top {
     transform-origin: center;
     transform: rotateX(90deg) translateZ(30px);
     background: yellow;
 }
 
+/* bottom the dice */
 .bottom {
     transform-origin: center;
     transform: rotateX(90deg) translateZ(-30px);
@@ -118,39 +115,34 @@
     background: black;
     border-radius: 100%;
     margin: 3%;
-
 }
-.right .dot{
+
+.right .dot {
     margin: 5%;
 }
-.bottom .dot{
+
+.bottom .dot {
     margin: 4%;
 }
 
-.anm{
+/* 3D rolling dice */
+.anm {
     animation: animl 3s 30;
 }
+
 @keyframes animl {
     0% {
 
         transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
     }
+
     50% {
 
         transform: rotateX(160deg) rotateY(-120deg) rotateZ(20deg);
     }
+
     100% {
 
         transform: rotateX(60deg) rotateY(120deg) rotateZ(120deg);
     }
 }
-
-
-/* responsive */
-/* 
-@media(max-width:768px){
-    .board{
-        width: 600px;
-        height: 600px;
-    }
-} */
