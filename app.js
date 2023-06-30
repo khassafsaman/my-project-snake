@@ -7,7 +7,7 @@ function createBoxes() {
             y = i * 50;
             x = j * 50;
             const id = "b_" + no;
-            const imageSrc = no === 100 ? "img/home1.png" : " ";
+            const imageSrc = no === 100 ? "img/crown1.png" : " ";
             boxes += ` <div class="box" id="${id}" style="margin: ${y}px ${x}px;">
             <img src="${imageSrc}" alt="" style="width:50px; height: 50px; object-fit:contain;" />
             </div>`;
