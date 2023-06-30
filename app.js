@@ -56,7 +56,11 @@ function playerMover(move) {
 
             if (pos === 100) {
                 setTimeout(() => {
-                    alert("Congratulations!!! You have reached your destination");
+                    alert("Congratulations!!! you win");
+                    pos = 0;
+                    createBoxes();
+                    document.querySelector("#rtbtn").style.display = "block";
+                    document.querySelector(".dice").style.display = "block";
                 }, 1000);
 
                 document.querySelector("#rtbtn").style.display = "none";
@@ -106,7 +110,7 @@ function rotateDice() {
     // document.querySelector("#rtbtn").style.display = "none";
     document.querySelector(".dice").classList.add("anm");
     dice_value = parseInt(Math.random() * 6) + 1;
-    // dice_value=4;
+    // dice_value = 4;
 
     LIST = [[0, 0, 0], [-90, 0, 0], [0, 90, 0], [0, -90, 0], [90, 0, 0], [180, 0, 0]];
 
