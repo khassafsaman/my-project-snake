@@ -6,7 +6,11 @@ function createBoxes() {
         for (let j = 0; j < 10; j++) {
             y = i * 50;
             x = j * 50;
-            boxes += ` <div class="box" id="b_${no}" style="margin: ${y}px ${x}px;"></div>`;
+            const id = "b_" + no;
+            const imageSrc = no === 100 ? "img/home1.png" : " ";
+            boxes += ` <div class="box" id="${id}" style="margin: ${y}px ${x}px;">
+            <img src="${imageSrc}" alt="" style="width:50px; height: 50px; object-fit:contain;" />
+            </div>`;
             no += inc;
 
         }
@@ -41,6 +45,7 @@ createBoxes();
 
 // Player position
 let pos = 0;
+
 
 // Player movement function
 function playerMover(move) {
@@ -107,8 +112,8 @@ let snakes = [
 
 // Dice roll function
 function rotateDice() {
-    // document.querySelector("#rtbtn").style.display = "none";
     document.querySelector(".dice").classList.add("anm");
+    isDiceRolling = true;
     dice_value = parseInt(Math.random() * 6) + 1;
     // dice_value = 4;
 
