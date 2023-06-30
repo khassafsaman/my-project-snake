@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* Game frame style */
 .game-frame {
     width: 600px;
     height: 600px;
@@ -12,7 +12,7 @@
     margin-top: 40px;
     padding: 10px;
 }
-
+/* board style */
 .board {
     width: 500px;
     height: 500px;
@@ -24,6 +24,24 @@
     background-size: 100%;
 }
 
+/* box style */
+.box {
+    width: 48px;
+    height: 48px;
+    border: 1px solid black;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+}
+/* backgroundimage style */
+.smiley{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;   
+}
+
+/* dice-frame style */
 .dice-frame {
     width: 500px;
     height: 80px;
@@ -32,24 +50,7 @@
     position: absolute;
 }
 
-.box {
-    width: 48px;
-    height: 48px;
-    border: 1px solid black;
-    background: rgba(0, 0, 0, 0.3);
-    position: absolute;
-}
-
-.cir {
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.918);
-    transform: scale(0.7);
-    border-radius: 100%;
-    border: 1px solid green;
-    opacity: 0.9;
-}
-
+/* style dice */
 .dice {
     margin: auto;
     width: 60px;
@@ -58,7 +59,7 @@
     transform-style: preserve-3d;
 }
 
-/* style dice */
+
 .dice>div {
     width: 100%;
     height: 100%;
@@ -109,6 +110,7 @@
     background: yellow;
 }
 
+/* Styling dice points */
 .dot {
     width: 16px;
     height: 16px;

@@ -19,13 +19,16 @@ function createBoxes() {
 
     }
     document.querySelector(".board").innerHTML = boxes;
-
-
 }
 
-// Create a square with a red circle
-function setbox(id, color) {
-    document.getElementById(id).innerHTML = `<div class='cir' style='background:${color}'></div>`;
+// Setting the box using the input ID and setting the background 
+function setbox(id) {
+    const boxElement = document.getElementById(id);
+    const smileyElement = document.createElement("div");
+    smileyElement.classList.add('smiley');
+    smileyElement.style.backgroundImage = `url("img/chess1.png")`;
+    boxElement.innerHTML = "";
+    boxElement.appendChild(smileyElement);
 
 };
 
@@ -53,7 +56,7 @@ function playerMover(move) {
 
             if (pos === 100) {
                 setTimeout(() => {
-                    alert("تبریک!شما به مقصد رسیدین:))");
+                    alert("Congratulations!!! You have reached your destination");
                 }, 1000);
 
                 document.querySelector("#rtbtn").style.display = "none";
@@ -154,6 +157,7 @@ function check(data) {
 
     }
 };
+
 
 
 
