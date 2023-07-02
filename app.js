@@ -48,7 +48,9 @@ let pos = 0;
 
 
 // Player movement function
+
 function playerMover(move) {
+
     if (move > 0) {
         setTimeout(() => {
             if (pos >= 1) {
@@ -65,11 +67,9 @@ function playerMover(move) {
                     pos = 0;
                     createBoxes();
                     document.querySelector("#rtbtn").style.display = "block";
-                    document.querySelector(".dice").style.display = "block";
-                }, 1000);
+                }, 10);
 
-                document.querySelector("#rtbtn").style.display = "none";
-                document.querySelector(".dice").style.display = "none";
+                    document.querySelector("#rtbtn").style.display = "none";
                 return;
             }
 
@@ -77,7 +77,7 @@ function playerMover(move) {
             if (move == 0) {
                 check(ladders);
                 check(snakes);
-                // document.querySelector("#rtbtn").style.display = "block";
+                document.querySelector("#rtbtn").style.display = "block";
             }
 
         }, 1000);
@@ -112,8 +112,8 @@ let snakes = [
 
 // Dice roll function
 function rotateDice() {
+    document.querySelector("#rtbtn").style.display = "none";
     document.querySelector(".dice").classList.add("anm");
-    isDiceRolling = true;
     dice_value = parseInt(Math.random() * 6) + 1;
     // dice_value = 4;
 
